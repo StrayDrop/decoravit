@@ -1,18 +1,50 @@
 {
-    "name": "decoravit",
-    "productName": "Decoravit",
-    "version": "1.0.0",
-    "description": "A beautiful JS beautifier",
+    "name": "decoravit2",
+    "productName": "Decoravit2",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/StrayDrop/decoravit"
+    },
+    "version": "1.1.0",
+    "description": "A beautiful JS beautifier - resurrected",
     "main": "main.js",
+    "license": "UNLICENSED",
     "scripts": {
         "start": "electron .",
-        "build": "electron-zip-packager . --platform=darwin --arch=x64 --out=dist --icon=assets/icon.icns --overwrite"
+        "buildzip": "electron-zip-packager . --platform=darwin --arch=x64 --out=dist --icon=assets/icon.icns --overwrite",
+        "pack": "electron-builder --dir",
+        "dist:mac": "electron-builder --mac",
+        "dist:mac:NO_CS": "export CSC_IDENTITY_AUTO_DISCOVERY=false; electron-builder --mac",
+        "dist:win": "electron-builder --win",
+        "dist:linux": "electron-builder --linux",
+        "dist:all": "electron-builder --mwl",
+        "publish:all": "electron-builder --mwl --publish always",
+        "publish:all:NO_CS": "export CSC_IDENTITY_AUTO_DISCOVERY=false; electron-builder -mwl --publish always"
     },
-    "author": "Emile Nijssen",
+    "author": "Emile Nijssen, StrayDrop",
     "devDependencies": {
-        "electron": "~1.7.10"
+        "electron": "5.0.0",
+        "electron-builder": "^21.2.0"
     },
     "dependencies": {
         "electron-settings": "^3.1.4"
+    },
+    "build": {
+        "appId": "io.straydrop.devoravit2",
+        "productName": "Decoravit2",
+        "copyright": "Copyright © 2019 Emile Nijssen, StrayDrop",
+        "mac": {
+            "category": "public.app-category.developer-tools",
+            "publish": "github"
+        },
+        "win": {
+            "target": "zip",
+            "publish": "github"
+        },
+        "linux": {
+            "target": "AppImage",
+            "maintainer": "StrayDrop",
+            "publish": "github"
+        }
     }
 }
