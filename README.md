@@ -1,7 +1,7 @@
 # Decoravit2
 Minified Code Beautifier. 
 
-Original App is created by Emile Nijssen. (last maintain is at 2 years ago.)
+Original App was created by Emile Nijssen. (last maintainance was at 2 years ago.)
 
 Currently, Resurrected and Maintained by StrayDrop.
 
