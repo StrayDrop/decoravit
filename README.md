@@ -1,3 +1,5 @@
+[Deprecated] This function can be alternated by VSCode, So I quit maintenance.
+
 # Decoravit2
 Minified Code Beautifier. 
 
